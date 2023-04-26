@@ -1,4 +1,8 @@
 # monite_test
+# User guide
+
+<details>
+
 # Company customer
 Learn how to register a customer of your company and assign a bank account to them before status changing.
 ## Overview
@@ -90,3 +94,96 @@ The successful response contains information about the customer's status activat
   "status": "active"
 }
 
+```
+</details>
+
+# API Reference
+
+<details>
+
+## Register a customer
+
+### Endpoint 
+**POST** https://api.sandbox.monite.com/v1/customers
+
+Create a customer of a company
+
+**Body parameters**
+
+|  Parameter    | Type          | Definition.   |
+| ------------- | ------------- | ------------- |
+| id *          | UUID          | An identification number of a customer |
+| name *        | String        | The full name of a customer            |
+| email         | String        | A customer email                       |
+| status *      | String        | A customer status                      |
+
+* — required parameter
+
+**Responses**
+
+| Response code | Definition           |
+| ------------- | -------------        |
+| 200           | Successful response  |
+| 401           | Unauthorized         |
+| 405           | Method Not Allowed   |
+| 422           | Validation Error     |
+| 500           | Internal Server Error|
+
+## Add a bank account to a customer
+
+### Endpoint 
+**POST** https://api.sandbox.monite.com/v1/bank_accounts
+
+Add a bank account to a customer
+
+**Body parameters**
+
+|  Parameter    | Type          | Definition                             |
+| ------------- | ------------- | -------------                          |
+| id *          | UUID          | An identification number of a bank     |
+| iban *        | String        | The IBAN of a bank account             |
+| bic           | String        | The BIC of a bank account              |
+| name *        | String        | The full name of a customer            |
+| customer_id * | String        | An identification number of a customer |
+
+* — required parameter
+
+**Responses**
+
+| Response code | Definition           |
+| ------------- | -------------        |
+| 200           | Successful response  |
+| 401           | Unauthorized         |
+| 405           | Method Not Allowed   |
+| 422           | Validation Error     |
+| 500           | Internal Server Error|
+
+## Activate a customer
+
+### Endpoint 
+**POST** https://api.sandbox.monite.com/v1/customers/{customer_id}/set_as_active/
+
+Activate a customer
+
+**Body parameters**
+
+|  Parameter    | Type          | Definition.   |
+| ------------- | ------------- | ------------- |
+| id *          | UUID          | An identification number of a customer |
+| name *        | String        | The full name of a customer            |
+| email         | String        | A customer email                       |
+| status *      | String        | A customer status                      |
+
+* — required parameter
+
+**Responses**
+
+| Response code | Definition           |
+| ------------- | -------------        |
+| 200           | Successful response  |
+| 401           | Unauthorized         |
+| 405           | Method Not Allowed   |
+| 422           | Validation Error     |
+| 500           | Internal Server Error|
+
+</details>
