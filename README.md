@@ -11,7 +11,7 @@ To start working with your customers, you need to register them, create bank acc
 To register a new customer in your company, call `POST /customers`.
 ```
 
-curl -X POST 'https://api.sandbox.monite.com/v1/customers' \
+curl -X POST 'https://api.companyexample.com/v1/customers' \
      -H 'X-Monite-Version: 2023-03-14' \
      -H 'X-Monite-Entity-Id: ENTITY_ID' \
      -H 'Authorization: Bearer ACCESS_TOKEN' \
@@ -40,7 +40,7 @@ To add a bank account to a customer, call `POST /bank_accounts`.
 
 ```
 
-curl -X POST 'https://api.sandbox.monite.com/v1/bank_accounts' \
+curl -X POST 'https://api.companyexample.com/v1/bank_accounts' \
      -H 'X-Monite-Version: 2023-03-14' \
      -H 'X-Monite-Entity-Id: ENTITY_ID' \
      -H 'Authorization: Bearer ACCESS_TOKEN' \
@@ -71,7 +71,7 @@ The successful response contains information about the bank account created:
 To set the customer's status as `active`, call `POST /customers/{customer_id}/set_as_active`.
 ```
 
-curl -X POST 'https://api.sandbox.monite.com/v1/customers/{customer_id}/set_as_active' \
+curl -X POST 'https://api.companyexample.com/v1/customers/{customer_id}/set_as_active' \
      -H 'X-Monite-Version: 2023-03-14' \
      -H 'X-Monite-Entity-Id: ENTITY_ID' \
      -H 'Authorization: Bearer ACCESS_TOKEN' \
@@ -104,7 +104,7 @@ The successful response contains information about the customer's status activat
 ## Register a customer
 
 ### Endpoint 
-**POST** https://api.sandbox.monite.com/v1/customers
+**POST** https://api.companyexample.com/v1/customers
 
 Create a customer of a company
 
@@ -132,7 +132,7 @@ Create a customer of a company
 ## Add a bank account to a customer
 
 ### Endpoint 
-**POST** https://api.sandbox.monite.com/v1/bank_accounts
+**POST** https://api.companyexample.com/v1/bank_accounts
 
 Add a bank account to a customer
 
@@ -161,7 +161,7 @@ Add a bank account to a customer
 ## Set a customer status
 
 ### Endpoint 
-**POST** https://api.sandbox.monite.com/v1/customers/{customer_id}/set_as_active/
+**POST** https://api.companyexample.com/v1/customers/{customer_id}/set_as_active/
 
 Set the customer status
 
