@@ -67,7 +67,7 @@ The successful response contains information about the bank account created:
 }
 
 ```
-### Activate a customer
+### Set a customer status
 To set the customer's status as `active`, call `POST /customers/{customer_id}/set_as_active`.
 ```
 
@@ -158,12 +158,12 @@ Add a bank account to a customer
 | 422           | Validation Error     |
 | 500           | Internal Server Error|
 
-## Activate a customer
+## Set a customer status
 
 ### Endpoint 
 **POST** https://api.sandbox.monite.com/v1/customers/{customer_id}/set_as_active/
 
-Activate a customer
+Set the customer status
 
 **Body parameters**
 
@@ -187,3 +187,11 @@ Activate a customer
 | 500           | Internal Server Error|
 
 </details>
+
+# Release Notes
+
+<details>
+     
+### What's new in version 2023
+**Improved workflow with the customers of your company**
+We have added a new functionality that allows to register your customers and assign associated bank accounts to them. Moreover, you can easily set an `active` status for a customer after bank account assignement. 
